@@ -8,4 +8,8 @@ var options = {
 var http = require('http');
 var Client = require('./client');
 
-new Client(http.request(options));
+var client = new Client(http.request(options));
+
+client.startListeningServer();
+client.writeSomethingToServer();
+client.close();

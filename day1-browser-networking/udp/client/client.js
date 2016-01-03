@@ -1,5 +1,5 @@
 var Log = require('../../logger')({
-    file: __dirname + '/log'
+    file: __dirname + '/info.log'
 });
 
 function Client(client, options) {

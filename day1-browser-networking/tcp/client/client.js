@@ -1,5 +1,5 @@
 var Log = require('../../logger')({
-    file: __dirname + '/log'
+    file: __dirname + '/info.log'
 });
 
 function Client(client) {
@@ -29,7 +29,7 @@ Client.prototype.getClient = function () {
 };
 
 Client.prototype.closeConnection = function () {
-    Log.info('Close connection')
+    Log.info('Close connection');
     this.getClient().end();
 };
 

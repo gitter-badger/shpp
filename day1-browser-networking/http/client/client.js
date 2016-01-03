@@ -1,19 +1,17 @@
 var Log = require('../../logger')({
-    file: __dirname + '/log'
+    file: __dirname + '/info.log'
 });
 
 function Client(request) {
-    this.receivedData = '';
-
     this.request = request;
-
-    this.request.on('response', this.onServerRespond.bind(this));
-
-    this.writeSomethingToServer();
-    this.endRequest();
+    this.receivedData = '';
 }
 
-Client.prototype.endRequest = function () {
+Client.prototype.startListeningServer = function () {
+    this.request.on('response', this.onServerRespond.bind(this));
+};
+
+Client.prototype.close = function () {
     this.request.end();
 };
 

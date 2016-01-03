@@ -3,14 +3,15 @@ var options = {
 };
 
 var http = require('http');
-var Server = require('./server');
+var Client = require('./client');
 
 var server = http.createServer(onClientConnected);
 
 server.listen(options.port, onServerStart);
 
 function onClientConnected(request, response) {
-    new Server(request, response);
+    var client = new Client(request, response);
+    client.startListeners();
 }
 
 function onServerStart() {

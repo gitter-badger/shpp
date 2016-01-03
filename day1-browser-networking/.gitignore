@@ -1,5 +1,4 @@
 .idea/
-http/**/log
-udp/**/log
-tcp/**/log
+info.log
 node_modules/
+day1-browser-networking.iml
