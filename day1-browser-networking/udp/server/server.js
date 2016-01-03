@@ -2,20 +2,22 @@ var Log = require('../../logger')({
     file: __dirname + '/info.log'
 });
 
-function Server(client, options) {
-    this.setClient(client);
-
-    this.getClient().on('message', this.onDataReceive.bind(this));
-
-    this.getClient().bind(options.port);
+function Server(socket, options) {
+    this.setSocket(socket);
+    this.options = options;
 }
 
-Server.prototype.setClient = function (client) {
-    this.client = client;
+Server.prototype.startListeners = function () {
+    this.getSocket().on('message', this.onDataReceive.bind(this));
+    this.getSocket().bind(this.options.port);
 };
 
-Server.prototype.getClient = function () {
-    return this.client;
+Server.prototype.setSocket = function (socket) {
+    this.socket = socket;
+};
+
+Server.prototype.getSocket = function () {
+    return this.socket;
 };
 
 Server.prototype.onDataReceive = function (msg, client) {
@@ -32,7 +34,7 @@ Server.prototype.respondToClient = function (msg, client) {
 
     Log.info('Send message to the client ' + client.address + ': ' + msg);
 
-    this.getClient().send(
+    this.getSocket().send(
         this.prepareMessage(msg),
         0,
         msg.length,

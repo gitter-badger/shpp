@@ -4,12 +4,7 @@ var Log = require('../../logger')({
 
 function Client(client, options) {
     this.setClient(client);
-
     this.options = options;
-
-    this.startToListenMessageFromServer();
-    this.sayHello();
-
 }
 
 Client.prototype.startToListenMessageFromServer = function () {
