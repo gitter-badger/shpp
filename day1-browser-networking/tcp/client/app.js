@@ -6,10 +6,12 @@ var options = {
 var net = require('net');
 var Client = require('./client');
 
-var client = net.connect({
+var connect = net.connect({
    port: options.serverPort
 }, onConnectionSuccess);
 
 function onConnectionSuccess() {
-    new Client(client);
+    var client = new Client(connect);
+    client.startListeners();
+    client.sayHelloToServer();
 }

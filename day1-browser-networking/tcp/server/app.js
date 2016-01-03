@@ -3,7 +3,7 @@ var options = {
 };
 
 var net = require('net');
-var Server = require('./server');
+var Client = require('./client');
 
 var server = net.createServer(onClientConnected);
 
@@ -13,6 +13,7 @@ function onServerStart() {
     console.log('server started and listening ' + options.port + ' port');
 }
 
-function onClientConnected(client) {
-    new Server(client);
+function onClientConnected(socket) {
+    var client = new Client(socket);
+    client.startListeners();
 }

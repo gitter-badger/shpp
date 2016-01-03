@@ -4,17 +4,18 @@ var Log = require('../../logger')({
 
 function Client(client) {
     this.setClient(client);
-    this.sayHello();
-
-    this.getClient().on('data', this.onDataReceived.bind(this));
 }
+
+Client.prototype.startListeners = function () {
+    this.getClient().on('data', this.onDataReceived.bind(this));
+};
 
 Client.prototype.onDataReceived = function (data) {
     Log.info('Received message from server: ' + data.toString());
     this.closeConnection();
 };
 
-Client.prototype.sayHello = function () {
+Client.prototype.sayHelloToServer = function () {
     var msg = 'Hello!';
     Log.info('Send message `' + msg + '` to the server');
     this.getClient().write(msg);

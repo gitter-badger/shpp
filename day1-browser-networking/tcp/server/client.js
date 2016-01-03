@@ -4,12 +4,13 @@ var Log = require('../../logger')({
 
 function Server(client) {
     this.setClient(client);
-
     Log.info('New client ' + this.getClient().remoteAddress + ' connected');
+}
 
+Server.prototype.startListeners = function () {
     this.getClient().on('end', this.onClientEnd.bind(this));
     this.getClient().on('data', this.onServerReceiveData.bind(this));
-}
+};
 
 Server.prototype.onServerReceiveData = function (data) {
     Log.info('Server received data: ' + data.toString() + ' from client ' + this.getClient().remoteAddress);
