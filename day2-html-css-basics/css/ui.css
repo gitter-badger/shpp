@@ -1,0 +1,19 @@
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* For IE6-7 */
+.clearfix {
+    zoom: 1;
+}
+
+.ui-inline-list li {
+    float: left;
+}

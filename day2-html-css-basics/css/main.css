@@ -1,0 +1,291 @@
+html, body {
+    background-color: #f0f0f0;
+    font-family: Open Sans, serif;
+    color: #878787;
+}
+
+header {
+    margin: 28px 0;
+    height: 47px;
+    clear: both;
+}
+
+.wrap {
+    width: 960px;
+    margin: 0 auto;
+}
+
+header .logo {
+    width: 124px;
+    height: 47px;
+    float: left;
+    background: url('../img/logo.png');
+}
+
+header .nav {
+    height: 47px;
+    line-height: 47px;
+    vertical-align: middle;
+    float: right;
+}
+
+header .nav ul {
+
+}
+
+header .nav ul li {
+    float: left;
+    margin: 0 10px;
+}
+
+header .nav ul li a {
+    color: #4b4b4b;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+header .nav ul li.active a {
+    color: #ad6069;
+}
+
+.social-icons ul li:last-child {
+    margin-right: 0;
+}
+
+.social-icons ul li:first-child {
+    margin-left: 0;
+}
+
+.social-icons ul li {
+    margin: 0 3px;
+}
+
+.post-header .social-contact .social-icons {
+    margin: 5px 0;
+}
+
+.post-header .social-contact .title .big-letter {
+    font-size: 16px;
+}
+
+.post-header .social-contact .title {
+    color: #4b4b4b;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.post-header .social-contact {
+    float: left;
+}
+
+.post-header .greeter {
+    width: 700px;
+    float: left;
+    padding-right: 30px;
+    margin-right: 30px;
+    font-size: 22px;
+    line-height: 30px;
+    border-right: 1px solid #d6d6d6;
+}
+
+.post-header .wrap {
+    padding: 28px 0;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.portfolio-content {
+    margin: 38px 0px;
+}
+
+.portfolio-content .work:nth-child(4n) {
+    margin-right: 0;
+}
+
+.portfolio-content .work {
+    width: 225px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.portfolio-content .work .image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.portfolio-content .work .image img {
+    width: 100%;
+    min-height: 100%;
+}
+
+.portfolio-content .work .name {
+    height: 40px;
+    background: #fff;
+    color: #4b4b4b;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.bottom-line {
+    height: 20px;
+    width: 960px;
+    background: url('../img/footer-line.png');
+    margin: 0 auto;
+}
+
+.bottom-content {
+    margin: 28px 0;
+}
+
+.bottom-content {
+}
+
+.bottom-content .widgets {
+
+}
+
+.bottom-content .widgets .widget {
+    width: 300px;
+    margin-right: 20px;
+    float: left;
+}
+
+.widget .name {
+    height: 40px;
+    background: #fff;
+    color: #4b4b4b;
+    line-height: 40px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    margin: 10px 0;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.widget.widget-popular-posts {
+}
+
+.widget.widget-popular-posts .posts-list {
+    margin: 10px 0;
+}
+
+.widget.widget-popular-posts .posts-list .post {
+    margin: 10px 0;
+}
+
+.widget.widget-popular-posts .posts-list .post .photo {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    padding: 6px;
+    float: left;
+    margin-right: 10px;
+}
+
+.widget.widget-popular-posts .posts-list .post .photo img {
+}
+
+.widget.widget-popular-posts .posts-list .post .content {
+    float: left;
+}
+
+.widget.widget-popular-posts .posts-list .post .content .post-name {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.widget.widget-popular-posts .posts-list .post .content .post-date {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.widget.widget-twitter {
+}
+
+.widget.widget-twitter .tweets-list {
+
+}
+
+.widget.widget-twitter .tweets-list .tweet:last-child {
+    border-bottom: 0;
+}
+
+.widget.widget-twitter .tweets-list .tweet:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url('../img/icon-bird.png');
+    margin-left: -25px;
+}
+
+.widget.widget-twitter .tweets-list .tweet {
+    margin: 15px 0;
+    padding-left: 28px;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 15px;
+}
+
+.widget.widget-twitter .tweets-list .tweet .tweet-name {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.widget.widget-twitter .tweets-list .tweet .tweet-date {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #ad6069;
+}
+
+.widget.widget-contact-form {
+}
+
+.widget.widget-contact-form .form {
+}
+
+.widget.widget-contact-form .form .field {
+}
+
+.widget.widget-contact-form .form .field input[type=text],
+.widget.widget-contact-form .form .field textarea {
+    background: #e2e2e2;
+    padding: 5px 10px;
+    color: #4b4b4b;
+    border: 0;
+    font-size: 12px;
+    height: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+.widget.widget-contact-form .form .field textarea {
+    height: 100px;
+}
+
+.widget.widget-contact-form .form .field input[type=submit],
+.widget.widget-contact-form .form .field input[type=button] {
+    border: 1px solid #1e1e1e;
+    background: #5c5c5c;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: rgba(99, 99, 99, 1);
+    background: -moz-linear-gradient(top, rgba(99, 99, 99, 1) 0%, rgba(75, 75, 75, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(99, 99, 99, 1)), color-stop(100%, rgba(75, 75, 75, 1)));
+    background: -webkit-linear-gradient(top, rgba(99, 99, 99, 1) 0%, rgba(75, 75, 75, 1) 100%);
+    background: -o-linear-gradient(top, rgba(99, 99, 99, 1) 0%, rgba(75, 75, 75, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(99, 99, 99, 1) 0%, rgba(75, 75, 75, 1) 100%);
+    background: linear-gradient(to bottom, rgba(99, 99, 99, 1) 0%, rgba(75, 75, 75, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#636363', endColorstr='#4b4b4b', GradientType=0);
+}
+footer {
+    margin-top: 40px;
+    background: #222222;
+    color: #fff;
+    font-size: 13px;
+    padding: 15px 0;
+}
