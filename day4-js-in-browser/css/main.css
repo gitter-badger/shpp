@@ -1,0 +1,57 @@
+.wrap {
+  width: 720px;
+  margin: 0 auto; }
+
+.my-checkbox {
+  line-height: 40px;
+  vertical-align: middle;
+  padding-top: 8px; }
+
+.header {
+  margin: 14px 0;
+  padding: 10px 10px; }
+
+.tasks-buttons {
+  margin-top: 20px;
+  border: 1px solid #ECECEC;
+  padding: 0 10px;
+  border-radius: 5px; }
+  .tasks-buttons > .help-buttons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 20px 5px; }
+    .tasks-buttons > .help-buttons .ui.basic.buttons {
+      width: 100%; }
+
+.tasks {
+  border: 1px solid #ECECEC;
+  padding: 0 10px;
+  border-radius: 5px; }
+  .tasks > .ui.form > .fields {
+    padding: 5px 0;
+    border-bottom: 1px solid #ECECEC; }
+    .tasks > .ui.form > .fields:last-child {
+      border-bottom: none; }
+    .tasks > .ui.form > .fields > .field {
+      margin-bottom: 0; }
+  .tasks > .ui.form .task.completed .text span {
+    text-decoration: line-through; }
+  .tasks .text {
+    font-size: 16px;
+    padding-left: 16px;
+    padding-top: 11px;
+    line-height: 30px; }
+    .tasks .text .icon {
+      float: right;
+      cursor: pointer; }
+    .tasks .text.hidden {
+      display: none; }
+  .tasks .text-field {
+    padding-top: 7px; }
+    .tasks .text-field input[type=text] {
+      font-size: 16px;
+      padding-left: 15px;
+      padding-top: 8px;
+      padding-bottom: 8px; }
+    .tasks .text-field.hidden {
+      display: none; }

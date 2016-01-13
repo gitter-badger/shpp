@@ -1,0 +1,79 @@
+.wrap {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.my-checkbox {
+  line-height: 40px;
+  vertical-align: middle;
+  padding-top: 8px;
+}
+
+.header {
+  margin: 14px 0;
+  padding: 10px 10px;
+}
+
+.tasks-buttons {
+  margin-top: 20px;
+  border: 1px solid #ECECEC;
+  padding: 0 10px;
+  border-radius: 5px;
+  > .help-buttons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 20px 5px;
+    .ui.basic.buttons {
+      width: 100%;
+    }
+  }
+}
+
+.tasks {
+  border: 1px solid #ECECEC;
+  padding: 0 10px;
+  border-radius: 5px;
+  > .ui.form {
+    > .fields {
+      padding: 5px 0;
+      border-bottom: 1px solid #ECECEC;
+      &:last-child {
+        border-bottom: none;
+      }
+      > .field {
+        margin-bottom: 0;
+      }
+    }
+    .task.completed {
+      .text span {
+        text-decoration: line-through;
+      }
+    }
+  }
+  .text {
+    font-size: 16px;
+    padding-left: 16px;
+    padding-top: 11px;
+    line-height: 30px;
+    .icon {
+      float: right;
+      cursor: pointer;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+  .text-field {
+    padding-top: 7px;
+    input[type=text] {
+      font-size: 16px;
+      padding-left: 15px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+
+}

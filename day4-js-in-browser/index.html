@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/semantic/dist/semantic.min.js"></script>
+    <script src="app/iquery.js"></script>
+    <script src="app/url-route.js"></script>
+    <script src="app/storage.js"></script>
+    <script src="app/event.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/todo.js"></script>
+    <link rel="stylesheet" href="bower_components/reset-css/reset.css">
+    <link rel="stylesheet" href="bower_components/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="body">
+
+<div class="wrap">
+
+    <div class="header">
+        <form class="ui form" id="taskCreateForm">
+            <div class="fields">
+                <div class="one wide field my-checkbox">
+                    <div class="ui checkbox">
+                        <input type="checkbox" tabindex="0" class="hidden" id="selectAll">
+                        <label></label>
+                    </div>
+                </div>
+                <div class="fifteen wide field">
+                    <input type="text" placeholder="Task Name" id="newTaskName" autocomplete="off">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="tasks">
+        <form class="ui form" id="tasksList"></form>
+        <!--<div class="help-buttons">-->
+            <!--<div class="ui form">-->
+                <!--<div class="fields">-->
+                    <!--<div class="wide field two remaining-items">-->
+                        <!--Remaining items: <span>0</span>-->
+                    <!--</div>-->
+                    <!--<div class="wide field twelve">-->
+                        <!--<div class="ui basic buttons">-->
+                            <!--<button class="ui button filter-show-all" tabindex="0">All</button>-->
+                            <!--<button class="ui button filter-show-active" tabindex="0">Active</button>-->
+                            <!--<button class="ui button filter-show-completed" tabindex="0">Completed</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="wide field two remove-all-completed">-->
+                        <!--<a href="javascript:void(0)">Remove completed</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+    <div class="tasks-buttons">
+        <div class="help-buttons">
+            <div class="ui form">
+                <div class="fields">
+                    <div class="wide field two remaining-items">
+                        Remaining items: <span>0</span>
+                    </div>
+                    <div class="wide field twelve">
+                        <div class="ui basic buttons">
+                            <button class="ui button filter-show-all" tabindex="0">All</button>
+                            <button class="ui button filter-show-active" tabindex="0">Active</button>
+                            <button class="ui button filter-show-completed" tabindex="0">Completed</button>
+                        </div>
+                    </div>
+                    <div class="wide field two remove-all-completed">
+                        <a href="javascript:void(0)">Remove completed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    $(function () {
+        $('.ui.checkbox').checkbox();
+    });
+</script>
+
+</body>
+</html>
